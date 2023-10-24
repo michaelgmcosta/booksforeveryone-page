@@ -17,16 +17,8 @@
 
 		body {
 			box-sizing: border-box;
-			height: 100vh;
 			background-color: #000000;
 			color: #F6F6F6;
-			overflow: hidden;
-		}
-
-		@media only screen and (max-width: 768px) {
-			body {
-				overflow: auto;
-			}
 		}
 
 		.presentation__content__title__emphasis {
@@ -36,15 +28,15 @@
 		.presentation {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
-			margin: 8% 15%;
+			justify-content: space-evenly;
+			margin: 7% 12%;
 		}
 
 		.presentation__content {
 			width: 615px;
 			display: flex;
 			flex-direction: column;
-			gap: 40px
+			gap: 4em;
 		}
 
 		.presentation__content__title {
@@ -59,12 +51,29 @@
 
 		.presentation__image {
 			width: 350px;
-
 		}
 
 		.images {
 			display: flex;
-			gap: 10%;
+			gap: 5em;
+			padding-left: 5em;
+		}
+		
+		.images__image {
+			border-radius: 10px;
+		}
+		
+		.images__image:hover {
+			transform: scale(1.1);
+		}
+
+		footer {
+			color: #FAFAFA;
+			background-color: #4285f4;
+			text-align: center;
+			font-family: 'Montserrat', sans-serif;
+			padding: 1em;
+			font-weight: 400;
 		}
 	</style>
 </head>
@@ -82,11 +91,11 @@
 			</a>
 		</section>
 		<section class="images">
-			<img src="img/bfe-1.png" alt="bfe-image-1">
-			<img src="img/bfe-2.png" alt="bfe-image-2">
+			<img class="images__image" src="img/bfe-1.png" alt="bfe-image-1">
+			<img class="images__image" src="img/bfe-2.png" alt="bfe-image-2">
 		</section>
     </main>
-    <footer></footer>
+    <footer><p>Developed by <a href="https://www.linkedin.com/in/michaelgm-costa/" style="text-decoration: none; color: #FAFAFA;">Michael</a></p></footer>
 </body>
 
 </html>
