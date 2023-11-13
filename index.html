@@ -2,27 +2,41 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books for everyone</title>
-	<link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Books for everyone</title>
+	<link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+		:root {
+			--primary-color: #040D12;
+			--secondary-color: #F6F6F6;
+			--tertiary-color: #4285f4;
+		}
 
 		* {
 			margin: 0;
 			padding: 0;
 		}
 
+		html {
+			height: 100%;
+			min-height: 100%;
+		}
+
 		body {
+			display: flex;
+			flex-direction: column;
+			min-height: 100%;
 			box-sizing: border-box;
-			background-color: #000000;
-			color: #F6F6F6;
+			background-color: var(--primary-color);
+			color: var(--secondary-color);
 		}
 
 		.presentation__content__title__emphasis {
-			color: #4285f4;
+			color: var(--tertiary-color);
 		}
 
 		.presentation {
@@ -58,44 +72,52 @@
 			gap: 5em;
 			padding-left: 5em;
 		}
-		
+
 		.images__image {
 			border-radius: 10px;
 		}
-		
+
 		.images__image:hover {
 			transform: scale(1.1);
 		}
 
 		footer {
-			color: #FAFAFA;
-			background-color: #4285f4;
+			background-color: var(--tertiary-color);
 			text-align: center;
 			font-family: 'Montserrat', sans-serif;
 			padding: 1em;
 			font-weight: 400;
+			margin-top: auto;
+		}
+
+		footer a {
+			text-decoration: none;
+			color: var(--secondary-color);
 		}
 	</style>
 </head>
+
 <body>
-    <header></header>
-    <main class="presentation">
+	<main class="presentation">
 		<section class="presentation__content">
 			<h1 class="presentation__content__title">
 				Read over <strong class="presentation__content__title__emphasis">60,000</strong> classic books offline.
 			</h1>
-			<p class="presentation__content__text">All books are public domain so you can enjoy without any worries. 
+			<p class="presentation__content__text">All books are public domain so you can enjoy without any worries.
 				The application has some tools, such as a dictionary, to improve your experience.</p>
-			<a href='https://play.google.com/store/apps/details?id=com.ivanmrosa.BFE&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-				<img class="presentation__image" alt='Get it on Google Play' src='./img/google-play-badge.png'/>
+			<a href='https://play.google.com/store/apps/details?id=com.ivanmrosa.BFE&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+				target="_blank">
+				<img class="presentation__image" alt='Get it on Google Play' src='./assets/google-play-badge.png' />
 			</a>
 		</section>
 		<section class="images">
-			<img class="images__image" src="img/bfe-1.png" alt="bfe-image-1">
-			<img class="images__image" src="img/bfe-2.png" alt="bfe-image-2">
+			<img class="images__image" src="assets/bfe-1.png" alt="Application home screen">
+			<img class="images__image" src="assets/bfe-2.png" alt="Application reading screen">
 		</section>
-    </main>
-    <footer><p>Developed by <a href="https://www.linkedin.com/in/michaelgm-costa/" style="text-decoration: none; color: #FAFAFA;">Michael</a></p></footer>
+	</main>
+	<footer>
+		<p>Developed by <a href="https://www.linkedin.com/in/michaelgm-costa/" target="_blank">Michael</a></p>
+	</footer>
 </body>
 
 </html>
